@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Tree } from '@lezer/common';
+	import type { Tree } from 'lezer-poly/node_modules/@lezer/common';
 	import type { ParseNode } from '../playground';
 	import ParseTreeNode from './parseTreeNode.svelte';
 
@@ -52,7 +52,6 @@
 	}
 
 	$: nodes = iterateTree(tree, code);
-	$: console.log('NODES', nodes);
 </script>
 
 {#each nodes as node}

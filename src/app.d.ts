@@ -15,7 +15,7 @@ declare module '*.svx' {
 }
 
 declare module 'lezer-poly/src/generated/poly.js' {
-	import { LRParser } from '@lezer/lr';
+	import { LRParser } from 'lezer-poly/node_modules/@lezer/lr';
 
 	export const parser: LRParser;
 }
