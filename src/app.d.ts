@@ -7,3 +7,17 @@ declare namespace App {
 	// interface PageData {}
 	// interface Platform {}
 }
+
+declare module '*.svx' {
+	import Metadata from './metadata';
+
+	export const metadata: Metadata;
+}
+
+declare module 'lezer-poly/src/generated/poly.js' {
+	import { LRParser } from '@lezer/lr';
+
+	export const parser: LRParser;
+}
+
+declare module 'prismjs/components.json' {}
