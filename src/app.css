@@ -2,14 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-.token.keyword,
-.token.punctuation,
+.token.keyword .token.punctuation,
 .tok-keyword {
 	@apply text-blue-700;
 }
 
-.token.builtin {
+.token.builtin,
+.tok-variableName {
 	@apply text-cyan-700;
+}
+
+.tok-typeName {
+	@apply text-purple-700;
 }
 
 .token.number,

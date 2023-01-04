@@ -25,9 +25,38 @@
 	$: ast = parseAst(parseTree, code);
 
 	let code = '';
+
+	const examples = [
+		['Simple let', 'let x = 5;'],
+		['Let text type assign', 'let name: Text = "Dog";'],
+		['Text interpolation', 'var content = "\\[age] years old";'],
+		['Union type assign', 'type NumText = Number | Text;'],
+		[
+			'Simple add function',
+			`fn add(x: Number, y: Number) -> Number {
+  return x + y;
+}`
+		]
+	];
+
+	let selectedExample = '';
+
+	$: {
+		code = examples.find(([name]) => name === selectedExample)?.[1] ?? '';
+	}
 </script>
 
 <div class="self-start w-full md:w-7/12 md:pr-12">
+	<div class="select ~neutral max-w-x mb-4">
+		<select bind:value={selectedExample}>
+			<option value="">Select an example...</option>
+			<option disabled>—</option>
+			{#each examples as [name]}
+				<option value={name}>{name}</option>
+			{/each}
+		</select>
+	</div>
+
 	<PlaygroundEditor bind:value={code} tree={parseTree} />
 </div>
 

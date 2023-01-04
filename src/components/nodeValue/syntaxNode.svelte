@@ -1,5 +1,9 @@
 <script lang="ts">
-	import { expressionTypes, statementTypes } from 'lezer-poly/src/generated/ast';
+	import {
+		expressionTypes,
+		statementTypes,
+		typeExpressionTypes
+	} from 'lezer-poly/src/generated/ast';
 	import { emptyValueNode, type SyntaxValue } from '../../playground';
 	import ValueNode from './valueNode.svelte';
 
@@ -7,7 +11,8 @@
 
 	$: isProgram = value.value.kind === 'Program';
 	$: isStatement = statementTypes.includes(value.value.kind);
-	$: isExpression = expressionTypes.includes(value.value.kind);
+	$: isExpression =
+		expressionTypes.includes(value.value.kind) || typeExpressionTypes.includes(value.value.kind);
 
 	$: className = `${isProgram ? '~emerald' : ''} ${isStatement ? '~green' : ''} ${
 		isExpression ? '~amber' : ''
