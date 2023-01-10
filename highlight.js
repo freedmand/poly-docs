@@ -113,7 +113,6 @@ const code_highlight = (code, lang) => {
 		langs[normalised_lang] = { name: lang };
 		_lang = langs[normalised_lang];
 	}
-	console.log(_lang);
 	const highlighted = escape_svelty(
 		_lang ? Prism.highlight(code, Prism.languages[_lang.name], _lang.name) : escape(code)
 	);

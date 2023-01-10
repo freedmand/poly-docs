@@ -2,10 +2,9 @@
 	import { parser } from 'lezer-poly/src/generated/poly.js';
 	import { Context, parseProgram } from 'lezer-poly/src/generated/ast';
 	import type { Tree } from 'lezer-poly/node_modules/@lezer/common';
-	import ParseTree from '../../components/parseTree.svelte';
 	import type { SyntaxParse } from '../../playground';
-	import AstTree from '../../components/astTree.svelte';
 	import PlaygroundEditor from '../../components/playgroundEditor.svelte';
+	import TreeSidebar from '../../components/treeSidebar.svelte';
 
 	function parseAst(tree: Tree, code: string): SyntaxParse {
 		try {
@@ -36,6 +35,20 @@
 			`fn add(x: Number, y: Number) -> Number {
   return x + y;
 }`
+		],
+		[
+			'Simple if statement',
+			`if x + 1 == 5 / 2 {
+  x += 1;
+}`
+		],
+		['Order of operations', 'x + 2 * 3 + (4 - 1 / 5) * 5;'],
+		[
+			'Comments',
+			`// This is a comment
+/// This is a doc comment
+let x = 3 / 4; // inline comment
+let y = 4 / 3; /// inline doc comment`
 		]
 	];
 
@@ -60,13 +73,4 @@
 	<PlaygroundEditor bind:value={code} tree={parseTree} />
 </div>
 
-<div class="mt-4 md:w-5/12 md:mt-0">
-	<section class="section px-4">
-		<h2 class="heading text-xl">Syntax tree</h2>
-		<AstTree {ast} />
-	</section>
-	<section class="section px-4 mt-8">
-		<h2 class="heading text-xl">Parse tree</h2>
-		<ParseTree {code} tree={parseTree} />
-	</section>
-</div>
+<TreeSidebar {ast} {code} {parseTree} />

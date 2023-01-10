@@ -31,9 +31,6 @@ function getMarkdownHeadings() {
 	};
 }
 
-const defaultMdsvex = mdsvex();
-console.log(defaultMdsvex);
-
 function highlighter(code, lang) {
 	// if (lang !== 'poly') {
 	// 	return defaultMdsvex.highlighter(code, lang);

@@ -21,8 +21,9 @@
 	@apply text-emerald-700;
 }
 
-.token.comment {
-	@apply text-green-700;
+.token.comment,
+.tok-comment {
+	@apply text-gray-500;
 }
 
 .token.function {
