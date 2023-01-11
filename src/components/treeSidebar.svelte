@@ -11,11 +11,11 @@
 
 <div class="tree-sidebar mt-4 md:w-5/12 md:mt-0">
 	<section class="section px-4">
-		<h2 class="heading text-xl">Syntax tree</h2>
+		<h2 class="heading text-xl dark:text-white">Syntax tree</h2>
 		<AstTree {ast} />
 	</section>
 	<section class="section px-4 mt-8">
-		<h2 class="heading text-xl">Parse tree</h2>
+		<h2 class="heading text-xl dark:text-white mb-2">Parse tree</h2>
 		<ParseTree {code} tree={parseTree} />
 	</section>
 </div>

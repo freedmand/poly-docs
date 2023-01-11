@@ -13,7 +13,7 @@
 <TableOfContents metadata={data.metadata} />
 
 <article class="mt-4 md:w-2/3 mx-auto">
-	<section class="content ~neutral">
+	<section class="content ~neutral dark:~neutralDark dark:text-purple-fg">
 		<slot />
 	</section>
 </article>

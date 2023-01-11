@@ -205,12 +205,12 @@
 		bind:value
 		spellcheck="false"
 		placeholder="Type code here..."
-		class="code resize-none overflow-hidden w-full"
+		class="code resize-none overflow-hidden w-full dark:bg-slate-800 dark:text-purple-fg dark:caret:text-yellow-500"
 		style="grid-area: 1 / 1 / 2 / 2"
 		on:keydown={handleKeyDown}
 	/>
 	<pre
-		class="code language-poly overflow-hidden w-full pointer-events-none bg-transparent"
+		class="code language-poly overflow-hidden w-full pointer-events-none !bg-transparent"
 		style="white-space: break-spaces; grid-area: 1 / 1 / 2 / 2"
 		bind:this={highlightedCode}
 	/>

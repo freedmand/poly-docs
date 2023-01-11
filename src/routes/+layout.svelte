@@ -1,6 +1,7 @@
 <script>
 	import '../app.css';
 	import { page } from '$app/stores';
+	import DarkMode from '../components/darkMode.svelte';
 </script>
 
 <head />
@@ -14,7 +15,7 @@
 	<header class="flex flex-wrap items-center justify-between">
 		<div class="flex items-center">
 			<a href="/">
-				<h3 class="heading text-4xl ~neutral mr-8 pointer-events-none">
+				<h3 class="heading text-4xl dark:text-white mr-8 pointer-events-none">
 					<span class="flex items-center">
 						<span class="icon mr-2">
 							<svg height="45" viewBox="0 0 32 54" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -42,26 +43,27 @@
 					</span>
 				</h3>
 			</a>
-			<div class="text-neutral-700 mt-2">
+			<div class="dark:text-white mt-2">
 				<a
 					href="/about"
-					class="portal ~urge"
+					class="portal ~urge dark:~urgeDark"
 					class:active={$page.url.pathname === '/about'}
 					aria-selected={$page.url.pathname === '/about'}>About</a
 				>
 				<a
 					href="/docs"
-					class="portal ~urge"
+					class="portal ~urge dark:~urgeDark"
 					class:active={$page.url.pathname === '/docs'}
 					aria-selected={$page.url.pathname === '/docs'}>Docs</a
 				>
 				<a
 					href="/playground"
-					class="portal ~urge"
+					class="portal ~urge dark:~urgeDark"
 					class:active={$page.url.pathname === '/playground'}
 					aria-selected={$page.url.pathname === '/playground'}>Playground</a
 				>
 				<a href="https://poly.substack.com/" class="portal">Blog</a>
+				<DarkMode />
 			</div>
 		</div>
 	</header>

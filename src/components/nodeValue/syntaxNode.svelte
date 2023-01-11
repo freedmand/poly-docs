@@ -14,19 +14,19 @@
 	$: isExpression =
 		expressionTypes.includes(value.value.kind) || typeExpressionTypes.includes(value.value.kind);
 
-	$: className = `${isProgram ? '~emerald' : ''} ${isStatement ? '~green' : ''} ${
-		isExpression ? '~amber' : ''
-	}`;
+	$: className = `${isProgram ? '~emerald dark:~emeraldDark' : ''} ${
+		isStatement ? '~green dark:~greenDark' : ''
+	} ${isExpression ? '~amber dark:~amberDark' : ''}`;
 </script>
 
-<details class="card py-0 my-2 {className} @high" open>
+<details class="card py-0 my-2 px-2 !mx-1 special-card {className} @high" open>
 	<summary class="select-none font-bold">{value.value.kind}</summary>
 
 	{#if value.properties.length > 0}
 		<ul>
 			{#each value.properties as [key, val]}
 				{#if !emptyValueNode(val)}
-					<li class="card py-0 px-2 my-2 @low">
+					<li class="card py-0 px-2 my-0 !mx-1 special-card @low">
 						<div class="supra -mb-1 mt-1">{key}</div>
 						<ValueNode value={val} />
 					</li>

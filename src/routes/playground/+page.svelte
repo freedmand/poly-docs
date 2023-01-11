@@ -42,6 +42,12 @@
   x += 1;
 }`
 		],
+		[
+			'Simple for statement',
+			`for x in [1, 2, 3] {
+	y += [@index(x)];
+}`
+		],
 		['Order of operations', 'x + 2 * 3 + (4 - 1 / 5) * 5;'],
 		[
 			'Comments',
@@ -60,8 +66,8 @@ let y = 4 / 3; /// inline doc comment`
 </script>
 
 <div class="self-start w-full md:w-7/12 md:pr-12">
-	<div class="select ~neutral max-w-x mb-4">
-		<select bind:value={selectedExample}>
+	<div class="select ~neutral dark:~urgeNeutral max-w-x mb-4">
+		<select class="dark:bg-gray-900 dark:text-gray-200" bind:value={selectedExample}>
 			<option value="">Select an example...</option>
 			<option disabled>—</option>
 			{#each examples as [name]}

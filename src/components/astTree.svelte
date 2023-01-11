@@ -6,7 +6,7 @@
 </script>
 
 {#if ast.error}
-	<div class="card py-2 my-2 ~critical @low font-mono">{ast.message}</div>
+	<div class="card py-2 my-2 ~critical dark:~criticalDark @low font-mono">{ast.message}</div>
 {:else}
 	<SyntaxNode value={extractSyntaxNode(ast.program)} />
 {/if}
