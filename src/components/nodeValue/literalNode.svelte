@@ -4,4 +4,4 @@
 	export let value: LiteralValue;
 </script>
 
-<code class="code">{value.value}</code>
+<code class="code -mt-1 inline-block mb-1 py-0">{value.value}</code>

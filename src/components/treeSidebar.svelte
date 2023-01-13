@@ -11,7 +11,7 @@
 
 <div class="tree-sidebar mt-4 md:w-5/12 md:mt-0">
 	<section class="section px-4">
-		<h2 class="heading text-xl dark:text-white">Syntax tree</h2>
+		<h2 class="heading text-xl dark:text-white mb-2">Syntax tree</h2>
 		<AstTree {ast} />
 	</section>
 	<section class="section px-4 mt-8">
@@ -20,9 +20,12 @@
 	</section>
 </div>
 
-<style>
+<style lang="postcss">
 	.tree-sidebar :global(.card) {
-		display: inline-block;
-		@apply mr-4;
+		@apply inline-block align-top mr-4 mb-2;
+	}
+
+	.tree-sidebar :global(.card li) {
+		@apply inline-block;
 	}
 </style>
