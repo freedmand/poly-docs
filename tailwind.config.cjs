@@ -42,8 +42,9 @@ module.exports = {
 				slateDark: invert(colors.slate),
 				// Define a really dark purple for dark mode
 				// 'purple-dark': '#0d051c'
-				// 'purple-dark': '#130c21'
-				'purple-dark': '#100027',
+				// 'purple-dark': '#130c21',
+				// 'purple-dark': '#100027',
+				'purple-dark': '#130820',
 				'purple-fg': '#c2bcd0'
 			}
 		}

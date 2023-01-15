@@ -14,6 +14,12 @@ declare module '*.svx' {
 	export const metadata: Metadata;
 }
 
+declare module '*.md' {
+	import Metadata from './metadata';
+
+	export const metadata: Metadata;
+}
+
 declare module 'lezer-poly/src/generated/poly.js' {
 	import { LRParser } from 'lezer-poly/node_modules/@lezer/lr';
 

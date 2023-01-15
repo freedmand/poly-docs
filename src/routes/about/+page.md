@@ -23,6 +23,12 @@ Poly adopts much of its syntactic approach from JavaScript. Its imperative and f
 - [OCaml](https://ocaml.org/) has a rigid but expressive type system. With algebraic data types and exhaustive pattern matching, programs that compile tend to be delightfully bug-free. [ReScript](https://rescript-lang.org/) is a successful adaptation of OCaml to the web
 - [Zig](https://ziglang.org/) is a modern successor to C that successfully shares an innovative and daring idea: compile-time. By treating types as first-class values and providing a mechanism to run functions internally during compilation, Zig achieves something remarkable. Generics and other complicated type transforms without the syntactic overhead.
 
+## Isn't this just TypeScript?
+
+TypeScript is superset of JavaScript with an additional type syntax that compiles to plain JavaScript.
+
+Poly is a language that will compile to HTML, CSS, and JavaScript. But even considering only the base language, Poly has a more expressive type system than TypeScript, treating types as values that can be run in functions like anything else. This simplifies considerations like generics and reduces the complexity of the language because no special meta syntax over types is needed.
+
 ## Why the name Poly?
 
 It's short for polyglot (one who knows several languages). It captures the ideal of having a web programming language abstract away HTML, CSS, and JS in a unified syntax that the compiler can optimize across.
