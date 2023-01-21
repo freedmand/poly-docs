@@ -2,6 +2,8 @@
 title: About
 ---
 
+# About
+
 Welcome! Poly is a work-in-progress programming language with the ambitious resolve to reimagine creating for the web. It is being developed (slowly) by [Dylan Freedman](https://dylanfreedman.com/) as a side project.
 
 In the long-term, Poly aims to provide:

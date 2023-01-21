@@ -55,6 +55,14 @@
 /// This is a doc comment
 let x = 3 / 4; // inline comment
 let y = 4 / 3; /// inline doc comment`
+		],
+		[
+			'Classes with operator overloading',
+			`class Int(Number) {
+  operator *(other: Int) -> Int {
+    return self * other;
+  }
+}`
 		]
 	];
 

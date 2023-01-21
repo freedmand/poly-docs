@@ -44,8 +44,14 @@ module.exports = {
 				// 'purple-dark': '#0d051c'
 				// 'purple-dark': '#130c21',
 				// 'purple-dark': '#100027',
-				'purple-dark': '#130820',
-				'purple-fg': '#c2bcd0'
+				// 'purple-dark': '#130820',
+				// 'purple-dark': '#1a0f2a',
+				// 'purple-dark': '#22182F',
+				'purple-dark': '#140d1d',
+				// 'purple-fg': '#c2bcd0',
+				// 'purple-fg': '#a494b8'
+				// 'purple-fg': '#B7A3C2'
+				'purple-fg': '#AFA3C2'
 			}
 		}
 	},

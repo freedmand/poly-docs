@@ -26,7 +26,7 @@
 	</div>
 {:else}
 	<details class="card py-0 px-2 my-0 !mx-1 special-card {className}" open>
-		<summary class="select-none font-bold">{node.type}</summary>
+		<summary class="select-none -bold">{node.type}</summary>
 		{#each node.children as child}
 			<svelte:self node={child} />
 		{/each}
